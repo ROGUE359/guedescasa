@@ -244,6 +244,63 @@ footer a:hover{color:var(--yellow)}
   .logo b{font-size:1.4rem}
 }
 @media (prefers-reduced-motion:reduce){.slide,.dep-btn .circ{transition:none}}
+
+/* ===== Orçamento (carrinho) ===== */
+[hidden]{display:none!important}
+.hdr-cart{position:relative;display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--yellow-ink);border:0;border-radius:999px;padding:9px 16px 9px 12px;font:800 .88rem var(--body);cursor:pointer}
+.hdr-cart svg{width:22px;height:22px}
+.badge-n{min-width:22px;height:22px;border-radius:999px;background:var(--royal);color:#fff;font-size:.75rem;font-weight:800;display:inline-grid;place-items:center;padding:0 6px}
+.badge-n[data-n="0"]{opacity:.55}
+.card .add{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--yellow);color:var(--yellow-ink);font:800 .88rem var(--body);border:0;padding:12px;cursor:pointer;width:100%}
+.card .add:hover{background:var(--yellow-dark)}
+.card .add svg{width:18px;height:18px}
+.card .inq{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--royal);color:#fff;padding:6px 8px;font-weight:700;font-size:.82rem}
+.step{display:inline-flex;align-items:center;background:rgba(255,255,255,.15);border-radius:8px}
+.step button{width:32px;height:32px;border:0;background:transparent;color:inherit;font:800 1.1rem var(--body);cursor:pointer;border-radius:8px}
+.step button:hover{background:rgba(255,255,255,.2)}
+.step span{min-width:28px;text-align:center;font-variant-numeric:tabular-nums}
+.qin{width:46px;height:32px;border:0;background:transparent;color:inherit;text-align:center;font:800 .95rem var(--body);font-variant-numeric:tabular-nums;-moz-appearance:textfield;appearance:textfield}
+.qin::-webkit-outer-spin-button,.qin::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.qin:focus{outline:2px solid var(--yellow);border-radius:6px}
+.cart-fab{position:fixed;right:18px;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:31;display:flex;align-items:center;gap:10px;background:var(--royal);color:#fff;border:0;border-radius:999px;padding:12px 18px 12px 14px;font:800 .9rem var(--body);box-shadow:0 8px 24px rgba(0,0,0,.3);cursor:pointer}
+.cart-fab svg{width:22px;height:22px}
+.cart-fab .badge-n{background:var(--yellow);color:var(--yellow-ink)}
+.overlay{position:fixed;inset:0;background:rgba(5,8,50,.55);z-index:40}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--surface);color:var(--ink);z-index:41;display:grid;grid-template-rows:auto 1fr;box-shadow:-10px 0 40px rgba(0,0,0,.25);padding-top:env(safe-area-inset-top,0px)}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;background:var(--royal);color:#fff}
+.drawer-head h2{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:1.6rem;letter-spacing:.02em}
+.x{width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:1.3rem;cursor:pointer}
+.drawer-body{overflow-y:auto;padding:16px 18px calc(24px + env(safe-area-inset-bottom,0px));display:grid;gap:16px;align-content:start}
+.ci{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.ci .th{width:52px;height:52px;border-radius:8px;background:var(--soft);display:grid;place-items:center;overflow:hidden}
+.ci .th img{width:100%;height:100%;object-fit:contain;background:#fff}
+.ci .th svg{width:60%;color:var(--royal)}
+.ci .nm{font-size:.82rem;font-weight:600;line-height:1.3;min-width:0}
+.ci .rm{background:none;border:0;color:var(--muted);font:600 .72rem var(--body);cursor:pointer;padding:2px 0;text-decoration:underline}
+.ci .step{background:var(--soft);color:var(--ink)}
+.cart-empty{text-align:center;color:var(--muted);padding:30px 10px}
+.cart-empty b{display:block;color:var(--ink);font-size:1.05rem;margin-bottom:6px}
+.form{display:grid;gap:12px;background:var(--soft);border-radius:10px;padding:16px}
+.form h3{margin:0;font-size:1rem}
+.form p.hint{margin:-6px 0 0;font-size:.8rem;color:var(--muted)}
+.fld{display:grid;gap:5px}
+.fld label{font-size:.8rem;font-weight:700}
+.fld input,.fld textarea{font:500 .95rem var(--body);padding:11px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);width:100%}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--royal)}
+.fld textarea{min-height:70px;resize:vertical}
+.fld .err{color:#c62828;font-size:.78rem;font-weight:600}
+.fld.bad input{border-color:#c62828}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opts label{white-space:nowrap;display:flex;align-items:center;gap:6px;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:600;font-size:.85rem;cursor:pointer}
+.opts input{accent-color:var(--royal)}
+.primary{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:0;border-radius:10px;padding:15px;font:800 1rem var(--body);cursor:pointer;text-decoration:none;background:var(--yellow);color:var(--yellow-ink)}
+.primary.wa{background:var(--wa);color:#fff}
+.primary svg{width:22px;height:22px}
+.ghost{background:none;border:0;color:var(--muted);font:700 .85rem var(--body);cursor:pointer;text-decoration:underline;justify-self:center}
+.preview{white-space:pre-wrap;background:var(--soft);border-radius:10px;padding:14px;font-size:.85rem;line-height:1.5;max-height:260px;overflow:auto;border-left:4px solid var(--wa)}
+.note{font-size:.8rem;color:var(--muted);margin:0}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:999px;font-weight:700;font-size:.88rem;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:calc(100% - 32px);text-align:center}
+@media (max-width:720px){.hdr-cart .lbl{display:none}.cart-fab{bottom:calc(86px + env(safe-area-inset-bottom,0px))}}
 </style>
 </head>
 <body>
@@ -264,10 +321,7 @@ footer a:hover{color:var(--yellow)}
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
       <span>Nossa loja<b>Queimados - RJ</b></span>
     </a>
-    <a class="hdr-item hdr-wa" href="https://wa.me/5521976755957?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>
-      Orçamento
-    </a>
+    <button class="hdr-cart" type="button" data-open-cart aria-label="Abrir meu orçamento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h11L21 7H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></svg><span class="lbl">Meu orçamento</span><span class="badge-n" data-count data-n="0">0</span></button>
   </div>
   <nav class="nav" aria-label="Menu">
     <div class="wrap">
@@ -437,6 +491,13 @@ footer a:hover{color:var(--yellow)}
   <div class="foot-band spaced">Material de construção</div>
 </footer>
 
+<button class="cart-fab" type="button" data-open-cart id="cartFab" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h11L21 7H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></svg>Ver orçamento <span class="badge-n" data-count data-n="0">0</span></button>
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+  <div class="drawer-head"><h2 id="drawerTitle">Meu orçamento</h2><button class="x" type="button" id="closeCart" aria-label="Fechar">✕</button></div>
+  <div class="drawer-body" id="drawerBody"></div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <a class="fab" href="https://wa.me/5521976755957?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>
 </a>
@@ -469,11 +530,10 @@ footer a:hover{color:var(--yellow)}
   var INDEX = PRODS.map(function(p){return norm(p[0]+' '+DEPS[p[1]]);});
 
   function card(p){
-    var msg = encodeURIComponent('Olá! Vim pelo site e quero saber o preço de: '+p[0]);
-    return '<article class="card"><div class="img'+(p[2]?' photo':'')+'">'+(p[2]?'<img src="fotos/'+p[2]+'.webp" alt="'+esc(p[0])+'" loading="lazy" decoding="async">':I[p[1]])+'</div>'+
+    return '<article class="card" data-name="'+esc(p[0])+'"><div class="img'+(p[2]?' photo':'')+'">'+(p[2]?'<img src="fotos/'+p[2]+'.webp" alt="'+esc(p[0])+'" loading="lazy" decoding="async">':I[p[1]])+'</div>'+
       '<div class="body"><span class="dept">'+esc(DEPS[p[1]])+'</span><h3>'+esc(p[0])+'</h3>'+
-      '<div class="price">Consulte o preço<small>Preço de balcão pelo WhatsApp</small></div></div>'+
-      '<a class="buy" href="'+WA+msg+'" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h11L21 7H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></svg>Pedir no WhatsApp</a></article>';
+      '<div class="price">Consulte o preço<small>Adicione ao orçamento e receba o preço</small></div></div>'+
+      buyArea(p)+'</article>';
   }
 
   function render(){
@@ -532,6 +592,137 @@ footer a:hover{color:var(--yellow)}
   });
   clearBtn.addEventListener('click', function(){ state={dep:null,q:'',shown:24}; qEl.value=''; markDeps(); render(); goTop(); });
   render();
+
+
+  // ===== Orçamento (carrinho) =====
+  var CART_KEY='guedes-orcamento-v1', cart=[]; // [{n:name,q:qty}]
+  var BYNAME={}; PRODS.forEach(function(p){BYNAME[p[0]]=p;});
+  try{ var sv=JSON.parse(localStorage.getItem(CART_KEY)||'[]'); if(Array.isArray(sv)) cart=sv.filter(function(x){return x&&BYNAME[x.n]&&x.q>0;}); }catch(e){}
+  var form={nome:'',tel:'',receb:'retirada',end:'',obs:''};
+  try{ var fv=JSON.parse(localStorage.getItem(CART_KEY+'-form')||'null'); if(fv) Object.assign(form,fv); }catch(e){}
+  function save(){ try{ localStorage.setItem(CART_KEY,JSON.stringify(cart)); localStorage.setItem(CART_KEY+'-form',JSON.stringify(form)); }catch(e){} }
+  function qtyOf(n){ if(!cart) return 0; var it=cart.find(function(x){return x.n===n;}); return it?it.q:0; }
+  function setQty(n,q){
+    var i=cart.findIndex(function(x){return x.n===n;});
+    if(q<=0){ if(i>-1) cart.splice(i,1); } else if(i>-1){ cart[i].q=Math.min(q,999); } else cart.push({n:n,q:q});
+    save(); syncCount(); refreshCards(n); if(!drawer.hidden && step==='list') renderDrawer();
+  }
+  function totalItems(){ return cart.length; }
+  function syncCount(){
+    var n=totalItems();
+    document.querySelectorAll('[data-count]').forEach(function(el){el.textContent=n; el.setAttribute('data-n',n);});
+    document.getElementById('cartFab').hidden = n===0;
+  }
+  var CART_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h11L21 7H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></svg>';
+  function buyArea(p){
+    var q=qtyOf(p[0]);
+    if(!q) return '<button class="add" type="button" data-act="add">'+CART_SVG+'Adicionar ao orçamento</button>';
+    return '<div class="inq"><span>✓ No orçamento</span><span class="step"><button type="button" data-act="dec" aria-label="Diminuir quantidade">−</button><input class="qin" type="number" inputmode="numeric" min="0" max="999" value="'+q+'" aria-label="Quantidade"><button type="button" data-act="inc" aria-label="Aumentar quantidade">+</button></span></div>';
+  }
+  function refreshCards(n){
+    document.querySelectorAll('.card').forEach(function(c){
+      if(n && c.getAttribute('data-name')!==n) return;
+      var p=BYNAME[c.getAttribute('data-name')]; if(!p) return;
+      var old=c.querySelector('.add, .inq'); if(old) old.outerHTML=buyArea(p);
+    });
+  }
+  document.addEventListener('change',function(e){
+    var inp=e.target.closest('.qin'); if(!inp) return;
+    var holder=inp.closest('.card, .ci'); if(!holder) return;
+    var v=parseInt(inp.value,10); if(isNaN(v)||v<0) v=0;
+    setQty(holder.getAttribute('data-name'),v);
+  });
+  document.addEventListener('keydown',function(e){ if(e.key==='Enter' && e.target.classList && e.target.classList.contains('qin')){ e.preventDefault(); e.target.blur(); } });
+  var toastEl=document.getElementById('toast'), toastT;
+  function toast(msg){ toastEl.textContent=msg; toastEl.hidden=false; clearTimeout(toastT); toastT=setTimeout(function(){toastEl.hidden=true;},2200); }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-act]'); if(!b) return;
+    var c=b.closest('.card'); if(!c) return;
+    var n=c.getAttribute('data-name'), q=qtyOf(n);
+    if(b.dataset.act==='add'){ setQty(n,1); toast('Adicionado ao orçamento ('+totalItems()+' '+(totalItems()>1?'itens':'item')+')'); }
+    else if(b.dataset.act==='inc') setQty(n,q+1);
+    else if(b.dataset.act==='dec') setQty(n,q-1);
+  });
+
+  var drawer=document.getElementById('drawer'), overlay=document.getElementById('overlay'), body=document.getElementById('drawerBody'), step='list', lastFocus=null;
+  function openCart(){ lastFocus=document.activeElement; step='list'; renderDrawer(); drawer.hidden=false; overlay.hidden=false; document.body.style.overflow='hidden'; document.getElementById('closeCart').focus(); }
+  function closeCart(){ drawer.hidden=true; overlay.hidden=true; document.body.style.overflow=''; if(lastFocus) lastFocus.focus(); }
+  document.querySelectorAll('[data-open-cart]').forEach(function(b){b.addEventListener('click',openCart);});
+  document.getElementById('closeCart').addEventListener('click',closeCart);
+  overlay.addEventListener('click',closeCart);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !drawer.hidden) closeCart(); });
+
+  function thumb(p){ return p[2]?'<img src="fotos/'+p[2]+'.webp" alt="" loading="lazy">':I[p[1]]; }
+  function maskTel(v){
+    var d=v.replace(/\D/g,'').slice(0,11);
+    if(d.length<=2) return d.length?'('+d:'';
+    if(d.length<=6) return '('+d.slice(0,2)+') '+d.slice(2);
+    if(d.length<=10) return '('+d.slice(0,2)+') '+d.slice(2,6)+'-'+d.slice(6);
+    return '('+d.slice(0,2)+') '+d.slice(2,7)+'-'+d.slice(7);
+  }
+  function buildMsg(){
+    var L=['*Pedido de orçamento — site Guedes Casa & Construção*','','*Nome:* '+form.nome.trim(),'*Telefone:* '+form.tel,
+      '*Recebimento:* '+(form.receb==='entrega'?'Entrega'+(form.end.trim()?' — '+form.end.trim():''):'Retirada na loja'),'','*Produtos ('+cart.length+'):*'];
+    cart.forEach(function(it,i){ L.push((i+1)+'. '+it.q+'x '+it.n); });
+    if(form.obs.trim()){ L.push('','*Observações:* '+form.obs.trim()); }
+    return L.join('\n');
+  }
+  function renderDrawer(){
+    if(!cart.length){
+      body.innerHTML='<div class="cart-empty"><b>Seu orçamento está vazio</b>Navegue pelos produtos e toque em <strong>Adicionar ao orçamento</strong> nos itens que você precisa. Depois é só enviar a lista toda de uma vez.</div><button class="primary" type="button" id="goShop">Ver produtos</button>';
+      document.getElementById('goShop').onclick=function(){ closeCart(); document.getElementById('departamentos').scrollIntoView(); };
+      return;
+    }
+    if(step==='list'){
+      body.innerHTML=
+        '<div>'+cart.map(function(it){ var p=BYNAME[it.n];
+          return '<div class="ci" data-name="'+esc(it.n)+'"><div class="th">'+thumb(p)+'</div><div class="nm">'+esc(it.n)+'<br><button class="rm" type="button" data-rm>Remover</button></div>'+
+          '<span class="step"><button type="button" data-d="-1" aria-label="Diminuir">−</button><input class="qin" type="number" inputmode="numeric" min="0" max="999" value="'+it.q+'" aria-label="Quantidade"><button type="button" data-d="1" aria-label="Aumentar">+</button></span></div>'; }).join('')+'</div>'+
+        '<form class="form" id="qform" novalidate>'+
+          '<h3>Seus dados</h3><p class="hint">Para identificarmos você e mandarmos o orçamento certinho.</p>'+
+          '<div class="fld" id="f-nome"><label for="qNome">Nome *</label><input id="qNome" autocomplete="name" value="'+esc(form.nome)+'" placeholder="Seu nome"><span class="err" hidden>Informe seu nome.</span></div>'+
+          '<div class="fld" id="f-tel"><label for="qTel">Telefone / WhatsApp *</label><input id="qTel" type="tel" inputmode="tel" autocomplete="tel" value="'+esc(form.tel)+'" placeholder="(21) 99999-9999"><span class="err" hidden>Informe um telefone com DDD.</span></div>'+
+          '<div class="fld"><label>Como prefere receber?</label><div class="opts">'+
+            '<label><input type="radio" name="receb" value="retirada" '+(form.receb!=='entrega'?'checked':'')+'> Retirar na loja</label>'+
+            '<label><input type="radio" name="receb" value="entrega" '+(form.receb==='entrega'?'checked':'')+'> Entrega</label></div></div>'+
+          '<div class="fld" id="f-end" '+(form.receb==='entrega'?'':'hidden')+'><label for="qEnd">Endereço ou bairro da entrega</label><input id="qEnd" autocomplete="street-address" value="'+esc(form.end)+'" placeholder="Rua, número, bairro"></div>'+
+          '<div class="fld"><label for="qObs">Observações</label><textarea id="qObs" placeholder="Cor, medida, marca preferida, prazo…">'+esc(form.obs)+'</textarea></div>'+
+          '<button class="primary" type="submit">Revisar pedido de orçamento</button>'+
+        '</form>';
+      var f=document.getElementById('qform');
+      var tel=document.getElementById('qTel');
+      tel.addEventListener('input',function(){ tel.value=maskTel(tel.value); form.tel=tel.value; save(); });
+      document.getElementById('qNome').addEventListener('input',function(e){form.nome=e.target.value; save();});
+      document.getElementById('qObs').addEventListener('input',function(e){form.obs=e.target.value; save();});
+      document.getElementById('qEnd').addEventListener('input',function(e){form.end=e.target.value; save();});
+      f.querySelectorAll('input[name=receb]').forEach(function(r){ r.addEventListener('change',function(){ form.receb=r.value; save(); document.getElementById('f-end').hidden = r.value!=='entrega'; }); });
+      f.addEventListener('submit',function(e){
+        e.preventDefault();
+        var okN=form.nome.trim().length>=2, okT=form.tel.replace(/\D/g,'').length>=10;
+        [['f-nome',okN],['f-tel',okT]].forEach(function(x){ var el=document.getElementById(x[0]); el.classList.toggle('bad',!x[1]); el.querySelector('.err').hidden=x[1]; });
+        if(!okN){ document.getElementById('qNome').focus(); return; }
+        if(!okT){ tel.focus(); return; }
+        step='review'; renderDrawer();
+      });
+      body.querySelectorAll('.ci').forEach(function(row){
+        var n=row.getAttribute('data-name');
+        row.querySelector('[data-rm]').onclick=function(){ setQty(n,0); };
+        row.querySelectorAll('[data-d]').forEach(function(btn){ btn.onclick=function(){ setQty(n,qtyOf(n)+(+btn.dataset.d)); }; });
+      });
+      return;
+    }
+    // review step
+    var msg=buildMsg();
+    body.innerHTML='<h3 style="margin:0">Confira seu pedido</h3>'+
+      '<div class="preview">'+esc(msg).replace(/\*/g,'')+'</div>'+
+      '<a class="primary wa" id="sendWa" href="'+WA+encodeURIComponent(msg)+'" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>Enviar pelo WhatsApp</a>'+
+      '<p class="note">Vai abrir o WhatsApp com a mensagem pronta. Confira e toque em <strong>enviar</strong> para a gente receber seu pedido.</p>'+
+      '<button class="ghost" type="button" id="backEdit">Voltar e editar</button>'+
+      '<button class="ghost" type="button" id="clearCart">Limpar orçamento e começar outro</button>';
+    document.getElementById('backEdit').onclick=function(){ step='list'; renderDrawer(); };
+    document.getElementById('clearCart').onclick=function(){ cart=[]; save(); syncCount(); refreshCards(); step='list'; renderDrawer(); };
+  }
+  syncCount(); refreshCards();
 
   // Carrossel
   var slides = document.querySelectorAll('.slide'), dotsEl = document.getElementById('dots'), cur = 0, timer;
