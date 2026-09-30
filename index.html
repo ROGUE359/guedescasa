@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Guedes Casa & Construção: material de construção em Queimados (RJ), próximo ao túnel. Mais de 1.600 produtos, entrega na obra em Queimados e orçamento pelo WhatsApp (21) 97675-5957.">
+<meta name="description" content="Guedes Casa & Construção: material de construção em Queimados (RJ), próximo ao túnel. Mais de 1.600 produtos, entrega na obra e orçamento pelo WhatsApp (21) 97675-5957.">
 <meta property="og:title" content="Guedes Casa & Construção">
 <meta property="og:description" content="Material de construção em Queimados. Orçamento pelo WhatsApp (21) 97675-5957.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231418b8'/%3E%3Cpath d='M8 46 30 26 44 38M38 32l10-8 10 8M16 40V22h6v10' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
@@ -361,9 +361,9 @@ footer a:hover{color:var(--yellow)}
       <div class="slide" aria-label="2 de 3">
         <div class="wrap">
           <div>
-            <div class="tag"><span>Entrega em Queimados</span></div>
+            <div class="tag"><span>Entrega na obra</span></div>
             <h2>Pediu no Zap, <em>chegou na obra</em></h2>
-            <p>Mande sua lista pelo WhatsApp. A gente separa, passa o orçamento e entrega no endereço da sua obra. Por enquanto, entregamos só no município de Queimados.</p>
+            <p>Mande sua lista pelo WhatsApp. A gente separa, passa o orçamento e entrega no endereço da sua obra.</p>
             <a class="cta wa" href="https://wa.me/5521976755957?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20com%20entrega." target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
           </div>
           <div class="art" aria-hidden="true">
@@ -429,7 +429,7 @@ footer a:hover{color:var(--yellow)}
   <!-- Benefícios -->
   <section class="perks">
     <div class="wrap">
-      <div class="perk"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div><div><b>Entrega na obra</b><span>Só em Queimados, combine pelo WhatsApp</span></div></div>
+      <div class="perk"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div><div><b>Entrega na obra</b><span>Combine pelo WhatsApp</span></div></div>
       <div class="perk"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg></div><div><b>Nota fiscal</b><span>Produtos novos e com procedência</span></div></div>
       <div class="perk"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>Aberto todos os dias</b><span>Inclusive domingo de manhã</span></div></div>
       <div class="perk"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9M3 9h18v11H3zM9 20v-6h6v6"/></svg></div><div><b>Também na Shopee</b><span>Compre online se preferir</span></div></div>
@@ -684,8 +684,8 @@ footer a:hover{color:var(--yellow)}
           '<div class="fld" id="f-tel"><label for="qTel">Telefone / WhatsApp *</label><input id="qTel" type="tel" inputmode="tel" autocomplete="tel" value="'+esc(form.tel)+'" placeholder="(21) 99999-9999"><span class="err" hidden>Informe um telefone com DDD.</span></div>'+
           '<div class="fld"><label>Como prefere receber?</label><div class="opts">'+
             '<label><input type="radio" name="receb" value="retirada" '+(form.receb!=='entrega'?'checked':'')+'> Retirar na loja</label>'+
-            '<label><input type="radio" name="receb" value="entrega" '+(form.receb==='entrega'?'checked':'')+'> Entrega (só em Queimados)</label></div></div>'+
-          '<div class="fld" id="f-end" '+(form.receb==='entrega'?'':'hidden')+'><label for="qEnd">Endereço da entrega (só no município de Queimados)</label><input id="qEnd" autocomplete="street-address" value="'+esc(form.end)+'" placeholder="Rua, número, bairro, Queimados"></div>'+
+            '<label><input type="radio" name="receb" value="entrega" '+(form.receb==='entrega'?'checked':'')+'> Entrega</label></div></div>'+
+          '<div class="fld" id="f-end" '+(form.receb==='entrega'?'':'hidden')+'><label for="qEnd">Endereço ou bairro da entrega</label><input id="qEnd" autocomplete="street-address" value="'+esc(form.end)+'" placeholder="Rua, número, bairro"></div>'+
           '<div class="fld"><label for="qObs">Observações</label><textarea id="qObs" placeholder="Cor, medida, marca preferida, prazo…">'+esc(form.obs)+'</textarea></div>'+
           '<button class="primary" type="submit">Revisar pedido de orçamento</button>'+
         '</form>';
